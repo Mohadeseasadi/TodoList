@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(55, 114, 88, 0.607);
+    color: black;
+    font-family:cursive;
+    margin-top: 30px;
+}
+
+header{
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+header, 
+.todo-import{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-input,
+#todo-button{
+    padding: .5rem;
+    font-size: 2rem;
+    border: none;
+    background: rgb(244, 238, 227);
+}
+
+#todo-button{
+    color: rgb(51, 72, 51);
+    background: rgb(244, 238, 227);
+    cursor: pointer;
+}
+
+#todo-button:hover{
+    background: rgb(51, 72, 51) ;
+    color:rgb(244, 238, 227) ;
+}
+
+#todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-list{
+    min-height: 30%;
+    list-style: none;
+}
+
+
