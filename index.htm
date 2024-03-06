@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <header>
+        <h1>ToDo List</h1>
+    </header>
+    <!-- input and plus button -->
+    <div> 
+        <input type="text" id="todo-input">
+        <button type="submit" id="todo-button">
+            <i class="fas fa-plus-square"></i>
+        </button>
+    </div>
+    <br>
+    <!--added to the form with js-->
+    <div id="todo-container">
+        <ul id="todo-list"></ul>
+    </div>
     
-
-
-
-
+    <!-- connect js -->
     <script src="./main.js"></script>
 </body>
 </html>
