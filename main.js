@@ -5,6 +5,8 @@ var ul = document.getElementById("todo-list");
 
 // addeventlistener
 buuton.addEventListener("click",toDo)
+ul.addEventListener("click",deleteComplete);
+document.addEventListener("DOMContentLoaded",getTodos)
 
 
 // func for added works
