@@ -20,6 +20,7 @@ function toDo(event){
     li.innerText = works.value;
     todoDiv.appendChild(li)
     li.classList.add("todo-item")
+    saveLocal(works.value); // call func(save in storage)
     works.value = "" // clear input
 
     // create button for done works
@@ -53,4 +54,16 @@ function deleteComplete(event){
         const todo = item.parentElement;
         todo.classList.toggle("completed")
     }
+}
+
+// func to save works in localstorage
+function saveLocal(todo){
+    let todos ;
+    if(localStorage.getItem("todos") === null){
+        todos = [];
+    } else {
+        todos = JSON.parse(localStorage.getItem("todos"))
+    }
+    todos.push(todo);
+    localStorage.setItem("todos" , JSON.stringify(todos))
 }
