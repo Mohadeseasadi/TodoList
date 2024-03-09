@@ -36,3 +36,21 @@ function toDo(event){
 
     ul.appendChild(todoDiv)
 }
+
+// func for done and delete
+function deleteComplete(event){
+    let item = event.target;
+    item = item.parentElement;
+
+    // trash
+    if(item.classList[0] === "trash-btn"){
+        const todo = item.parentElement;
+        todo.remove();
+    }
+
+    // complete
+    if(item.classList[0] === "complete-btn"){
+        const todo = item.parentElement;
+        todo.classList.toggle("completed")
+    }
+}
