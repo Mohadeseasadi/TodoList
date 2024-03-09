@@ -82,3 +82,40 @@ function removeLocal(todo){
     localStorage.setItem("todos",JSON.stringify(todos))
 
 }
+
+// func for get data from localstorage
+function getTodos(){
+    let todos;
+    if(localStorage.getItem("todos") === null){
+        todos = [];
+    } else {
+        todos = JSON.parse(localStorage.getItem("todos"))
+    };
+    todos.forEach(function (todo) {
+    
+        // create html elemnt for added done and delete buttons and li
+        const todoDiv = document.createElement("div");
+        todoDiv.classList.add("todo");
+
+        // create element li
+        const li = document.createElement("li");
+        li.innerText = todo;
+        li.classList.add("todo-item")
+        todoDiv.appendChild(li)
+
+
+        // create button for done works
+        const completedBtn = document.createElement("button");
+        completedBtn.innerHTML = "<i class='fas fa-check'></i>";
+        completedBtn.classList.add("complete-btn");
+        todoDiv.appendChild(completedBtn)
+
+        // create button for trash works
+        const trashBtn = document.createElement("button");
+        trashBtn.innerHTML = "<i class='fas fa-trash'></i>";
+        trashBtn.classList.add("trash-btn");
+        todoDiv.appendChild(trashBtn)
+
+        ul.appendChild(todoDiv)
+    });
+}
