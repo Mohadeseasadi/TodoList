@@ -46,6 +46,7 @@ function deleteComplete(event){
     // trash
     if(item.classList[0] === "trash-btn"){
         const todo = item.parentElement;
+        removeLocal(todo) //call func(remove of storage)
         todo.remove();
     }
 
@@ -66,4 +67,18 @@ function saveLocal(todo){
     }
     todos.push(todo);
     localStorage.setItem("todos" , JSON.stringify(todos))
+}
+
+// func to remove works from localstorage
+function removeLocal(todo){
+    let todos ;
+    if(localStorage.getItem("todos") === null){
+        todos =[]
+    } else {
+        todos = JSON.parse(localStorage.getItem("todos"))
+    }
+    const todoIndex = todo.children[0].innerText;
+    todos.splice(todos.indexOf(todoIndex),1);
+    localStorage.setItem("todos",JSON.stringify(todos))
+
 }
