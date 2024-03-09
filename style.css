@@ -28,6 +28,8 @@ header,
     font-size: 2rem;
     border: none;
     background: rgb(244, 238, 227);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.384);
+
 }
 
 #todo-button{
@@ -50,6 +52,41 @@ header,
 #todo-list{
     min-height: 30%;
     list-style: none;
+}
+
+.todo{
+    margin: .5rem;
+    background-color: rgba(210, 202, 186, 0.792) ;
+    font-size: 1.5rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+}
+
+.todo li {
+    flex: 1;
+    padding: 0rem .5rem;
+}
+
+.trash-btn ,
+.complete-btn {
+    background: rgb(202, 47, 47);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn{
+    background: rgb(61, 138, 61);
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: .5;
 }
 
 
